@@ -13,9 +13,5 @@ xgboost==0.90.0
 
 Flask-SQLAlchemy
 requests
-imblearn.over
-imblearn.under_sampling
-imblearn.pipeline
-sklearn.metrics
-sklearn.model_selection
-sklearn.feature_extraction.text
+imblearn
+sklearn
