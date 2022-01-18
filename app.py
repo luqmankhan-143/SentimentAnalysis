@@ -5,8 +5,9 @@ from flask import Flask, url_for, render_template, request, redirect, session
 #from flask_sqlalchemy import SQLAlchemy
 import pickle
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfTransformer,CountVectorizer
 import model as md
+from sklearn.feature_extraction.text import TfidfTransformer,CountVectorizer
+
 
 # Create the application.
 app = flask.Flask(__name__)
