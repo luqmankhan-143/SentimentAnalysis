@@ -36,7 +36,7 @@ def login():
 
 
 if __name__ == '__main__':
-    app.PORT=5000 
+    app.port: process.env.PORT || 5000 
     app.debug=True
     app.run()
     
