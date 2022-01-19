@@ -5,9 +5,8 @@ from flask import Flask, url_for, render_template, request, redirect, session
 #from flask_sqlalchemy import SQLAlchemy
 import pickle
 import pandas as pd
-import model
 from sklearn.feature_extraction.text import TfidfTransformer,CountVectorizer
-
+import model as md
 
 # Create the application.
 app = flask.Flask(__name__)
@@ -27,7 +26,7 @@ def login():
         try:
             data = reviews[reviews['reviews_username'] == name]
             if not data.empty:
-                top_product = model.prediction(name,reviews)
+                top_product = md.prediction(name,reviews)
                 return  render_template('view.html',tables=[top_product.to_html(classes='name')], titles = ['NAN', 'Top 5 Prediction'])
             else:
                 return render_template('invalid.html')
@@ -37,6 +36,7 @@ def login():
 
 
 if __name__ == '__main__':
+    app.PORT=5000 
     app.debug=True
     app.run()
     
