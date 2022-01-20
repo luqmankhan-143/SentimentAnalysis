@@ -1,1 +1,1 @@
-web: python app.py runserver 0.0.0.0
+web: python app.py --bind :$PORT --workers 1 --threads 2 --timeout 0
