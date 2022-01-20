@@ -163,5 +163,3 @@ def prediction(name,reviews):
     return top_5_product  
 
 
-loadingdata('dataset/sample30.csv',"joshua")
-print(loadingdata('dataset/sample30.csv',"joshua"))
